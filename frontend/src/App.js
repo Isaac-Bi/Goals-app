@@ -6,12 +6,13 @@ import Register from './pages/Register';
 import Header from './components/Header';
 import {ToastContainer} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import "./style.css"
 
 function App() {
   return (
     <>
     <Router>
-      <div className='container'>
+      <div className='container' >
         <Header />
         <Routes>
           <Route path='/' element={<Dashboard />} />
