@@ -3,8 +3,12 @@ import { useSelector, useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { FaUser } from 'react-icons/fa'
+import { FaEnvelope } from 'react-icons/fa'
+import { FaLock } from 'react-icons/fa'
 import { register, reset } from '../features/auth/authSlice'
 import Spinner from '../components/Spinner'
+import lock from "../assets/lock.png"
+import mail from "../assets/mail.png"
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -65,15 +69,14 @@ function Register() {
   return (
     <>
       <section className='heading'>
-        <h1>
-          <FaUser /> Register
-        </h1>
-        <p>Please create an account</p>
+      <div className="ellipse-2" />
+        <h3 className="register">REGISTER</h3>
       </section>
 
       <section className='form'>
         <form onSubmit={onSubmit}>
-          <div className='form-group'>
+          <div className='email form-group'>
+            <FaUser className="icon_field"/>
             <input
               type='text'
               className='form-control'
@@ -84,7 +87,9 @@ function Register() {
               onChange={onChange}
             />
           </div>
-          <div className='form-group'>
+          <div className='email form-group'>
+            {/*<img className="email_img" src={mail} />*/}
+            <FaEnvelope className="icon_field"/>
             <input
               type='email'
               className='form-control'
@@ -95,7 +100,8 @@ function Register() {
               onChange={onChange}
             />
           </div>
-          <div className='form-group'>
+          <div className='password form-group'>
+            <FaLock className="icon_field"/>
             <input
               type='password'
               className='form-control'
@@ -106,7 +112,8 @@ function Register() {
               onChange={onChange}
             />
           </div>
-          <div className='form-group'>
+          <div className='password form-group'>
+            <FaLock className="icon_field"/>
             <input
               type='password'
               className='form-control'

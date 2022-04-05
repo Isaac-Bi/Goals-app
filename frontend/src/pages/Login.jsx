@@ -5,13 +5,11 @@ import { useSelector, useDispatch } from 'react-redux'
 import Spinner from '../components/Spinner'
 import { useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
-import "../style.css";
+import { FaEnvelope } from 'react-icons/fa'
+import { FaLock } from 'react-icons/fa'
 import bg from "../assets/bg.png";
 import fb from "../assets/facebook.png"
 import google from "../assets/google.png"
-import lock from "../assets/lock.png"
-import mail from "../assets/mail.png"
-
 
 
 function Login() {
@@ -63,19 +61,22 @@ function Login() {
         return <Spinner />
     }
 
-    
-
     return <>
-          <div className="loginpage" >
+        <section className="heading">
+            <div className="ellipse-2" />
+            <h3 className="login-title">LOGIN</h3>
+        </section>
+
+        <section className="loginpage" >
           <section className="form">
                 <form onSubmit={onSubmit}>
                     <div className="email form-group text-3">
-                        <img src={mail} />
+                        <FaEnvelope className="icon_field"/>
                         <input type="email" className="form-control" id="email" name="email" value={email} 
                         placeholder="Enter your email" onChange={onChange}/>
                     </div>
                     <div className="password form-group text5">
-                        <img src={lock} />    
+                        <FaLock className="icon_field"/>
                         <input type="password" className="form-control" id="password" name="password" value={password} 
                         placeholder="Enter your password" onChange={onChange}/>
                     </div>
@@ -84,28 +85,11 @@ function Login() {
                     </div>
                     <div className="ellipse-4" />
                 </form>
-            </section>
 
-            <div className="ellipse-2" />
-            <p className="text-2">LOGIN</p>
-            <span className="email">
-                <img src={mail} />
-                <p className="email_field">E-mail</p>
-            </span>
-            <div className="line-1" />
-            <span className="password">
-                <img src={lock} />                
-                <p className="text-5">Password</p>
-            </span>
-            <div className="line-2" />
-            <p className="text-4">-or-</p>
-            <div className="social">
-                <img src={google} />
-                <img src={fb} />
-            </div>
-          </div>
-          </>
-    {/*}
+            </section>
+          </section>
+        </>
+    {/*
     return <>
         <section className="heading">
           <h1>
@@ -140,10 +124,7 @@ function Login() {
         </div>
     </>
     
-    */
-   }
-
-
+    */}
 }
 
 

@@ -10,14 +10,18 @@ body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
   background-image: url("./assets/bg.png");
+  background-repeat: no-repeat;
 }
 
 a {
   text-decoration: none;
-  color: #000;
+  color:#6B6B6B;
+  ;
 }
 
 p {
+  font-weight: 200;
+  color: #6b6b6b;
   line-height: 1.7;
 }
 
@@ -30,10 +34,21 @@ li {
 }
 
 h1,
-h2,
-h3 {
-  font-weight: 600;
+h2 {
+  font-weight: 400;
+  font-family: Poppins;
+  font-size: 1.2em;
+  color: #6b6b6b;
   margin-bottom: 10px;
+}
+
+h3 {
+  font-family: Poppins;
+  color: #6b6b6b;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 0.8em;
 }
 
 .container {
@@ -49,7 +64,6 @@ h3 {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
-  border-bottom: 1px solid #e6e6e6;
   margin-bottom: 60px;
 }
 
@@ -81,6 +95,10 @@ h3 {
   font-weight: 700;
   margin-bottom: 50px;
   padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .heading p {
@@ -94,10 +112,24 @@ h3 {
 }
 
 .goal {
-  background-color: #f4f4f4;
+  border-radius: 5px;
+  font-family: Poppins;
+  border: 2px solid #FEC89A;
+  box-shadow: 2px 2px 0px #FEC89A;
+  background: none;
   margin: 10px 0;
   padding: 20px 0 10px;
   position: relative;
+}
+
+.goal h2 {
+  margin: 10px;
+}
+
+.goal div {
+  padding: 0;
+  font-weight: 200;
+  color: #FEC89A;
 }
 
 .goal .close {
@@ -109,6 +141,58 @@ h3 {
   background: none;
 }
 
+.loginpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.social img {
+  border-radius: 50%;
+}
+
+.email {
+  color: #C4C4C4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.icon_field {
+  margin-bottom: 10px;
+}
+
+.password {
+  color: #C4C4C4;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.text-2 {
+  text-align: left;
+  vertical-align: top;
+  font-size: 48px;
+  font-family: Poppins;
+  line-height: auto;
+  color: #6b6b6b;
+}
+
+.ellipse-2 {
+  height: 90px;
+  width: 90px;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+}
+
 .form,
 .content {
   width: 70%;
@@ -117,17 +201,33 @@ h3 {
 
 .form-group {
   margin-bottom: 10px;
+  
 }
 
 .form-group input,
 .form-group textarea,
 .form-group select {
+  margin-left: 1em;
   width: 100%;
   padding: 10px;
-  border: 1px solid #e6e6e6;
-  border-radius: 5px;
+  padding-left: 0px;
+  border: none;
+  border-bottom: 1px solid #6B6B6B;
+  outline: none;
+  /*border: 1px solid #e6e6e6;*/
   margin-bottom: 10px;
   font-family: Poppins;
+  background: None;
+}
+
+.goal .form-group {
+  margin: 0;
+}
+
+.form-group input:focus {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+  border-bottom: 1px solid #6B6B6B;
+  outline: none;
 }
 
 .form-group label {
@@ -138,9 +238,9 @@ h3 {
 
 .btn {
   padding: 10px 20px;
-  border: 1px solid #000;
+  border: 1px solid #6B6B6B;
   border-radius: 5px;
-  background: #000;
+  background: #6B6B6B;
   color: #fff;
   font-size: 16px;
   font-weight: 700;

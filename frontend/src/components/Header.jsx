@@ -23,7 +23,7 @@ function Header() {
                 {user ? (
                     <li>
                         <button className="btn" onClick={onLogout}>
-                            <FaSignOutAlt /> Logout
+                            <FaSignOutAlt /> LOGOUT
                         </button>
                     </li>
                 ) : (
@@ -31,13 +31,13 @@ function Header() {
                 <li>
                 <Link to='/login'>
                     <button className="btn">
-                        <FaSignInAlt /> Login
+                        <FaSignInAlt /> LOGIN
                     </button>
                 </Link>
                 </li>
                 <li>
                 <Link to='/register'>
-                    <FaUser /> Register
+                    <FaUser /> REGISTER
                 </Link>
                 </li>  
                 </>
